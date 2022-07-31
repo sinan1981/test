@@ -3,3 +3,12 @@
   tasks:
     - name: ping test
       ping:
+    - name: install http
+      yum:
+        name: httpd
+        state: latest
+        
+    - name: remove httpd
+      yum:
+        name: httpd
+        state: absent
